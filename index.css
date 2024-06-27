@@ -1,22 +1,90 @@
 h1{
     font-size: 25px;
 }
-.containar{
-    display: flex;
-    flex-direction: row;
-}
-.sidebar{
-    width: 25%;
-    margin: 10px, 0, 10px, 0;
-}
-.sidebar li{
-    display: block;
-    margin: 5px 0 5px 0;
-    padding: 5px 10px 5px 10px;
-    background-color: #eeeeee;
-    border-left: solid 3px #cccccc;
-}
+
 .content{
     width: 75%;
     margin: 10px, 0, 10px, 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.menu-button {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333;
+    transition: 0.4s;
+}
+
+#menu-toggle:checked ~ .menu-button .bar:nth-child(1) {
+    transform: rotate(45deg) translate(-2px, 3px);
+}
+
+#menu-toggle:checked ~ .menu-button .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked ~ .menu-button .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -13px);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #f3f3f3;
+    transition: 0.4s;
+    z-index: 1;
+    overflow-y: auto;
+}
+  
+#menu-toggle:checked ~ .menu {
+    left: 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+    transition: 0.2s;
+}
+  
+.menu ul li a:hover {
+    color: #bf7497;
 }
