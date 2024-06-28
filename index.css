@@ -100,3 +100,11 @@ body {
 .solt-ramen img{
     width: 100%
 }
+
+.solt-ramen h2{
+    font-family: 'HG行書体';
+}
+
+.solt-ramen iframe{
+    width:100%;
+}
