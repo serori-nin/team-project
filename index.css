@@ -1,5 +1,10 @@
 h1{
+    font-size: 30px;
+    text-align: center;
+}
+h2{
     font-size: 25px;
+    text-align: center;
 }
 .containar{
     display: flex;
@@ -7,7 +12,8 @@ h1{
 }
 .sidebar{
     width: 25%;
-    margin: 10px, 0, 10px, 0;
+    margin: 10px 0 10px 0;
+    padding: 0 10px 0 10px;
 }
 .sidebar li{
     display: block;
@@ -16,7 +22,11 @@ h1{
     background-color: #eeeeee;
     border-left: solid 3px #cccccc;
 }
+.sidebar a{
+    text-decoration: none;
+    color: black;
+}
 .content{
     width: 75%;
-    margin: 10px, 0, 10px, 0;
+    margin: 10px, 10px, 10px, 10px;
 }
