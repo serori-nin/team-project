@@ -93,3 +93,6 @@ body {
 .menu ul li a:hover {
     color: #bf7497;
 }
+.content img{
+    width:100%;
+}
